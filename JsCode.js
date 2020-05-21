@@ -43,3 +43,11 @@ function clearArea() {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
+
+function UploadPic() {
+    
+    // Generate the image data
+    var Pic = document.getElementById("myCanvas").toDataURL("image/png");
+    //Pic = Pic.replace(/^data:image\/(png|jpg);base64,/, "")
+    document.getElementById("sigpictxt").value = Pic;
+}
